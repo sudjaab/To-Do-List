@@ -1,75 +1,27 @@
-# Nuxt 3 Minimal Starter
+## Framework and Library
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+- Nuxt.js
+- Tailwind Css
+- Vue-date-picker
+- SweetAlert2
 
-## Setup
+## วิธีการใช้งาน
 
-Make sure to install the dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- Run Program โดยใช้ Command
+- ส่วนการทำงานจะแบ่งออกเป็น 3 หน้า คือ หน้าแสดงรายการ Task ทั้งหมด หน้าการสร้าง Task และหน้าการแก้ไข Task
+- หน้าแสดงรายการ Task ทั้งหมด
+  - แสดงรายการ Task ทั้งหมด โดยจะมีการแสดงจำนวน Task ที่รอดำเนินการ บริเวณด้านบนซ้ายของหน้า ในรูปแบบข้อความ “You have {{ จำนวน Task ที่รอดำเนินการ }} tasks left !”
+  - ในส่วนของ Task แต่ละรายการ จะแสดง หัวข้อ, วันที่สร้าง Task, คำอธิบาย Task, และวันครบกำหนด โดย Task ที่รอดำเนินการจะมีขอบด้านซ้ายสีน้ำเงิน และ Task ที่ดำเนินการเสร็จสิ้นแล้วจะมีขอบด้านซ้ายสีเขียวพร้อมกับขีดเส้นทับหัวข้อของ Task นั้น ๆ
+  - กดเลือก Checkbox หน้าหัวข้อของ Task แต่ละรายการเพื่อเปลี่ยนสถานะเป็น ดำเนินการเสร็จสิ้น หรือ รอดำเนินการ ได้
+  - กด Icon Pencil ใน Task แต่ละรายการเพื่อยังหน้าแก้ไข Task
+  - กด Icon Trash ใน Task แต่ละรายการเพื่อลบ Task ได้ โดยจะแสดงข้อความยืนยันการลบ ก่อนดำเนินการ หากเลือกยืนยันจะแสดงข้อความ “Delete Task Success”
+  - กดปุ่ม Add Task เพื่อไปยังหน้าการสร้าง Task
+- หน้าการสร้าง Task
+  - กรอกข้อมูลลงในแบบฟอร์มสำหรับการสร้าง Task ได้แก่ Title(หัวข้อ), Description(คำอธิบาย Task) และวันครบกำหนด (Due date)
+  - หากช่องที่มี \* สีแดง ว่างอยู่ เมื่อกด Add Task จะไม่สามารถสร้าง Task ได้และมีข้อความแจ้งเตือนช่องที่ว่าง
+  - หากสร้าง Task สำเร็จจะแสดงข้อความ “Add Task Success !” และกลับไปยังหน้าแสดงรายการ Task ทั้งหมด
+- หน้าการแก้ไข Task
+  - จะมีข้อมูลเดิมแสดงในแบบฟอร์ม
+  - กรอกข้อมูลใหม่ลงในแบบฟอร์ม
+  - หากช่องที่มี \* สีแดง ว่างอยู่ เมื่อกด Edit Task จะไม่สามารถแก้ไข Task ได้และมีข้อความแจ้งเตือนช่องที่ว่าง
+  - หากแก้ไข Task สำเร็จจะแสดงข้อความ “Edit Task Success !” และกลับไปยังหน้าแสดงรายการ Task ทั้งหมด
